@@ -1,0 +1,181 @@
+---
+
+---
+
+<div class="fixed inset-x-0 top-2 md:top-8 z-50">
+    <div class="mx-auto px-8 md:max-w-2xl">
+        <div
+            class="flex flex-col backdrop-blur-xl backdrop-filter border bg-zinc-200/60 dark:bg-zinc-900/60 border-zinc-600 dark:border-zinc-800 md:flex-row md:items-center md:justify-between mx-auto p-2 relative lg:rounded-2xl rounded-xl shadow-massive w-full transition duration-500"
+            x-data="{ open: false }"
+        >
+            <div
+                class="items-center flex flex-row justify-between md:justify-start"
+            >
+                <a
+                    href="/"
+                    class="font-semibold text-black dark:text-zinc-400 inline-flex text-xs items-center font-display pl-2 hover:text-black/50 dark:hover:text-white/50 cursor-pointer transition duration-500"
+                >
+                    <span>Inicio</span>
+                </a>
+
+                <button
+                    @click="open = !open"
+                    class="text-zinc-700 dark:text-zinc-400 inline-flex focus:outline-none focus:text-black dark:focus:text-white hover:text-accent-300 items-center justify-center md:hidden P-2 transition duration-500"
+                    ><svg
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        ><path
+                            d="M4 6h16M4 12h16M4 18h16"
+                            :class="{'hidden': open, 'inline-flex': !open }"
+                            class="inline-flex"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></path><path
+                            d="M6 18L18 6M6 6l12 12"
+                            :class="{'hidden': !open, 'inline-flex': open }"
+                            class="hidden"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></path></svg
+                    ></button
+                >
+            </div>
+
+            <nav
+                class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0"
+                :class="{'flex': open, 'hidden': !open}"
+            >
+                <ul
+                    class="items-center gap-3 justify-center list-none md:inline-flex md:ml-auto md:space-y-0 md:text-left md:border-none md:py-0 md:mt-0 space-y-2 text-center border-t border-zinc-800 pt-5 pb-3 mt-2 transition duration-500"
+                >
+                    <li>
+                        <a
+                            class="inline-flex items-center px-4 py-2 text-xs font-display font-semibold text-black hover:text-black/50 dark:text-zinc-400 dark:hover:text-zinc-100 cursor-pointer transition duration-500"
+                            onclick="document.getElementById('Projects').scrollIntoView();"
+                            >Proyectos
+                        </a>
+                    </li><li>
+                        <a
+                            class="inline-flex items-center px-4 py-2 text-xs font-display font-semibold text-black hover:text-black/50 dark:text-zinc-400 dark:hover:text-zinc-100 cursor-pointer transition duration-500"
+                            onclick="document.getElementById('Contact').scrollIntoView();"
+                            >Contacto
+                        </a>
+                    </li><li>
+                        <a
+                            class="inline-flex items-center px-4 py-2 text-xs font-display font-semibold text-black hover:text-black/50 dark:text-zinc-400 dark:hover:text-zinc-100 cursor-pointer transition duration-500"
+                            href="#"
+                            >Descargar CV
+                        </a>
+                    </li>
+                </ul>
+                <button
+                    id="theme-toggle-button"
+                    class="border rounded-2xl w-28 md:w-auto border-zinc-800 md:border-none inline-flex items-center px-4 py-2 text-xs font-display font-semibold text-black hover:text-black/50 dark:text-zinc-400 dark:hover:text-zinc-100 transition duration-500"
+                >
+                    <p class="md:hidden pr-3">Theme</p>
+                    <span id="darkIcon" class="dark:inline-block">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-sun-high"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                            ></path><path
+                                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+                            ></path><path d="M6.343 17.657l-1.414 1.414"
+                            ></path><path d="M6.343 6.343l-1.414 -1.414"
+                            ></path><path d="M17.657 6.343l1.414 -1.414"
+                            ></path><path d="M17.657 17.657l1.414 1.414"
+                            ></path><path d="M4 12h-2"></path><path d="M12 4v-2"
+                            ></path><path d="M20 12h2"></path><path d="M12 20v2"
+                            ></path></svg
+                        >
+                    </span>
+                    <span id="lightIcon" class="hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-moon-stars"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                            ></path>
+                            <path
+                                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                            ></path>
+                            <path
+                                d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+                            ></path>
+                            <path d="M19 11h2m-1 -1v2"></path>
+                        </svg>
+                    </span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</div>
+<script>
+    const html = document.documentElement;
+    const storedTheme = localStorage.getItem("theme");
+    const darkIcon = document.getElementById("darkIcon");
+    const lightIcon = document.getElementById("lightIcon");
+
+    if (storedTheme === "dark") {
+        html.classList.add("dark");
+        html.classList.remove("light");
+        lightIcon.classList.add("hidden");
+        darkIcon.classList.remove("hidden");
+    } else if (storedTheme === "light") {
+        html.classList.add("light");
+        html.classList.remove("dark");
+        lightIcon.classList.remove("hidden");
+        darkIcon.classList.add("hidden");
+    }
+
+    function toggleTheme() {
+        html.classList.toggle("dark");
+        html.classList.toggle("light");
+
+        lightIcon.classList.toggle("hidden");
+        darkIcon.classList.toggle("hidden");
+
+        const currentTheme = html.classList.contains("dark") ? "dark" : "light";
+
+        // Guarda el tema en localStorage
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    const toggleButton = document.getElementById("theme-toggle-button");
+
+    if (toggleButton) {
+        toggleButton.addEventListener("click", toggleTheme);
+    }
+
+    const like = document.getElementById("like");
+    const liked = document.getElementById("liked");
+
+    function likeded() {
+        like.classList.toggle("hidden");
+        liked.classList.toggle("hidden");
+    }
+
+    const botonlike = document.getElementById("likeded");
+
+    if (botonlike) {
+        botonlike.addEventListener("click", likeded);
+    }
+</script>

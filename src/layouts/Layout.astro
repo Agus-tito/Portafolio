@@ -1,0 +1,99 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link
+			href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			.i {
+				display: inline-block;
+				position: relative;
+				width: 80px;
+				height: 80px;
+			}
+			.i div {
+				position: absolute;
+				border: 2px solid #2f2f2f;
+				opacity: 1;
+				border-radius: 50%;
+				animation: lds-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+			}
+			.i div:nth-child(2) {
+				animation-delay: -0.9s;
+			}
+			@keyframes lds-ripple {
+				0% {
+					top: 36px;
+					left: 36px;
+					width: 0;
+					height: 0;
+					opacity: 0;
+				}
+				4.9% {
+					top: 36px;
+					left: 36px;
+					width: 0;
+					height: 0;
+					opacity: 0;
+				}
+				5% {
+					top: 36px;
+					left: 36px;
+					width: 0;
+					height: 0;
+					opacity: 1;
+				}
+				100% {
+					top: 0px;
+					left: 0px;
+					width: 72px;
+					height: 72px;
+					opacity: 0;
+				}
+			}
+		</style>
+		<title>{title}</title>
+	</head>
+	<body>
+		<div
+			class="h-screen bg-zinc-950 flex items-center justify-center"
+			id="preloader"
+		>
+			<div class="i"><div></div><div></div></div>
+		</div>
+		<main
+			class="bg-zinc-400 dark:bg-zinc-950 transition duration-500 hidden"
+			id="app"
+		>
+			<slot />
+		</main>
+	</body>
+
+	<script>
+		window.onload = function () {
+			document.getElementById("preloader").classList.add("hidden");
+			document.getElementById("app").classList.remove("hidden");
+		};
+
+		document.documentElement.classList.add("js");
+	</script>
+
+	<script
+		defer
+		src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+	></script>
+	<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+</html>

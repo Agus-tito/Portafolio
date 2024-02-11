@@ -1,0 +1,38 @@
+---
+interface Props {
+    href: string;
+    imageUrl: string;
+    title: string;
+    date: string;
+    description: string;
+}
+const { href,imageUrl,title,date,description } = Astro.props;
+---
+
+<article
+    class="p-3 duration-500 hover:scale-105 w-full h-auto border dark:bg-zinc-900/60 border-zinc-600  dark:border-zinc-800 md:flex-row md:items-center md:justify-between mx-auto relative lg:rounded-2xl rounded-xl transition"
+>
+    <a :href="href" aria-label="link to project">
+        <div class="relative rounded-xl">
+            <img
+                src={imageUrl}
+                alt="project image alt text"
+                class="rounded-xl"
+            />
+        </div>
+        <div class="mt-1 p-2">
+            <h3
+                class="text-xl text-violet-900 dark:text-violet-300 lg:text-2xl font-display font-semibold transition duration-500"
+            >
+                {title}
+            </h3>
+            <p class="text-gray-700 dark:text-gray-400 font-display transition duration-500"> {date}</p>
+            <p class="text-gray-800 dark:text-gray-300 font-display text-s transition duration-500">{description}</p>
+            <div
+                class="mt-2 flex w-2/3 flex-row flex-wrap justify-between mx-auto"
+            >
+                <slot/>
+            </div>
+        </div>
+    </a>
+</article>

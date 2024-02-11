@@ -1,0 +1,682 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+import Project from "../components/Project.astro";
+---
+
+<Layout title="Agustin Suarez">
+	<main id="Inicio">
+		<Nav />
+		<Header />
+	</main>
+	<Section title="¡Hola! Soy Agustín">
+		<Card>
+			<p
+				class="text-black dark:text-gray-200 font-display dark:font-light text-xl transition duration-500"
+			>
+				Estudiante apasionado por el desarrollo web. Con 21 años y
+				cursando el segundo año de la Tecnicatura Superior en Desarrollo
+				de Software, mi objetivo es solucionar problemas con mis
+				conocimientos. Me gusta la capacidad de crear aplicaciones web
+				que sean útiles, intuitivas y visualmente atractivas. Abierto a
+				aprender tecnologías fuera del desarrollo web.
+			</p>
+		</Card>
+	</Section>
+	<Section title="Aptitudes.">
+		<Card>
+			<dl
+				class="grid grid-cols-1 gap-12 md:grid-cols-3 lg:space-y-0 lg:gap-24"
+			>
+				<div>
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-users-group"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+								></path><path
+									d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"
+								></path><path
+									d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+								></path><path d="M17 10h2a2 2 0 0 1 2 2v1"
+								></path><path
+									d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+								></path><path d="M3 13v-1a2 2 0 0 1 2 -2h2"
+								></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Equipo y compromiso
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Soy un gran colaborador en equipo, dispuesto a aportar
+						mis habilidades para alcanzar los objetivos del proyecto
+						en conjunto. Me tomo muy en serio el trabajo asignado.
+					</dd>
+				</div>
+				<div>
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-bulb"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+								></path><path
+									d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+								></path><path d="M9.7 17l4.6 0"></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Aprendizaje y adaptación
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Una de mis principales habilidades es la de aprender con
+						rapidez. Me mantengo actualizado sobre las últimas
+						tecnologías de desarrollo web.
+					</dd>
+				</div>
+				<div>
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-stack-front"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M12 4l-8 4l8 4l8 -4l-8 -4"
+									fill="currentColor"></path><path
+									d="M8 14l-4 2l8 4l8 -4l-4 -2"></path><path
+									d="M8 10l-4 2l8 4l8 -4l-4 -2"></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Front-end
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Con sólidos conocimientos en desarrolo web, me destaco
+						en HTML, CSS, JS y frameworks de CSS como Tailwind CSS y
+						Bootstrap.
+					</dd>
+				</div>
+				<div>
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-stack-back"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M4 8l8 4l8 -4l-8 -4z"></path><path
+									d="M12 16l-4 -2l-4 2l8 4l8 -4l-4 -2l-4 2z"
+									fill="currentColor"></path><path
+									d="M8 10l-4 2l4 2m8 0l4 -2l-4 -2"
+								></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Back-end
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Uso de tecnologías del lado del servidor con simpleza,
+						usando entornos como Node.js y PHP, tambiem frameworks
+						como Laravel y Astro.
+					</dd>
+				</div>
+				<div>
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-database"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0"
+								></path><path d="M4 6v6a8 3 0 0 0 16 0v-6"
+								></path><path d="M4 12v6a8 3 0 0 0 16 0v-6"
+								></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Conocimientos básicos en SQL
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Logrando consultas, funciones de agragación, filtrar,
+						modificar datos, joins y subconsultas.
+					</dd>
+				</div>
+				<div id="likeded">
+					<dt class="inline-flex items-center gap-3">
+						<div
+							class="flex items-center justify-center text-black dark:text-white transition duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-heart-filled hidden"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								id="liked"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+									stroke-width="0"
+									fill="currentColor"></path></svg
+							>
+
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-heart"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								id="like"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+								></path></svg
+							>
+						</div>
+						<p
+							class="text-base font-medium font-display leading-6 text-black dark:text-white transition duration-500"
+						>
+							Comunidad Dev
+						</p>
+					</dt>
+					<dd
+						class="mt-4 text-sm font-display text-black dark:text-white transition duration-500"
+					>
+						Formo parte de la comunidad de programadores. La
+						colaboración y el intercambio de conocimientos son
+						fundamentales para el crecimiento individual y
+						colectivo.
+					</dd>
+				</div>
+			</dl>
+		</Card>
+	</Section>
+
+	<div id="Projects">
+		<Section title="Proyectos.">
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-12"
+			>
+				<Project
+					href="/"
+					imageUrl="/tecStore.png"
+					title="TecStore"
+					date="2024"
+					description="Primera E-commerce, aprendiendo nuevas tecnologías, usando MVC y explayando conocimientos en SQL."
+				>
+					<span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-laravel"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M3 17l8 5l7 -4v-8l-4 -2.5l4 -2.5l4 2.5v4l-11 6.5l-4 -2.5v-7.5l-4 -2.5z"
+							></path><path d="M11 18v4"></path><path
+								d="M7 15.5l7 -4"></path><path d="M14 7.5v4"
+							></path><path d="M14 11.5l4 2.5"></path><path
+								d="M11 13v-7.5l-4 -2.5l-4 2.5"></path><path
+								d="M7 8l4 -2.5"></path><path d="M18 10l4 -2.5"
+							></path></svg
+						></span
+					>
+					<span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-tailwind"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"
+							></path></svg
+						></span
+					><span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-javascript"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"
+							></path><path d="M7.5 8h3v8l-2 -1"></path><path
+								d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+							></path></svg
+						></span
+					>
+				</Project>
+
+				<Project
+					href="/"
+					imageUrl="/tecStore.png"
+					title="TecStore"
+					date="2024"
+					description="Primera E-commerce, aprendiendo nuevas tecnologías, usando MVC y explayando conocimientos en SQL."
+				>
+					<span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-laravel"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M3 17l8 5l7 -4v-8l-4 -2.5l4 -2.5l4 2.5v4l-11 6.5l-4 -2.5v-7.5l-4 -2.5z"
+							></path><path d="M11 18v4"></path><path
+								d="M7 15.5l7 -4"></path><path d="M14 7.5v4"
+							></path><path d="M14 11.5l4 2.5"></path><path
+								d="M11 13v-7.5l-4 -2.5l-4 2.5"></path><path
+								d="M7 8l4 -2.5"></path><path d="M18 10l4 -2.5"
+							></path></svg
+						></span
+					>
+					<span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-tailwind"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"
+							></path></svg
+						></span
+					><span
+						class="inline-block rounded py-2 text-xs text-zinc-800 dark:text-white lg:py-1 transition duration-500"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-javascript"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"
+							></path><path d="M7.5 8h3v8l-2 -1"></path><path
+								d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+							></path></svg
+						></span
+					>
+				</Project>
+			</div>
+		</Section>
+	</div>
+	<div id="Contact">
+		<Section title="¿Te gustaría saber más?">
+			<div class="max-w-screen-xl mx-auto px-5">
+				<div class="mt-16 text-center">
+					<h1
+						class="text-4xl lg:text-5xl font-semibold italic font-display lg:tracking-tight text-gray-800 dark:text-gray-400 transition duration-500"
+					>
+						Contactame.
+					</h1>
+				</div>
+				<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+					<div>
+						<h2
+							class="font-medium font-display text-2xl text-gray-800 dark:text-gray-400 transition duration-500"
+						>
+							Información de Contacto.
+						</h2>
+						<div class="mt-5">
+							<div
+								class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+							>
+								<svg
+									width="1em"
+									height="1em"
+									viewBox="0 0 24 24"
+									class="text-gray-900 dark:text-gray-400 w-4 h-4 transition duration-500"
+									data-icon="uil:map-marker"
+								>
+									<symbol id="ai:uil:map-marker"
+										><path
+											fill="currentColor"
+											d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8m0 17.65c-2.13-2-6-6.31-6-9.65a6 6 0 0 1 12 0c0 3.34-3.87 7.66-6 9.65M12 6a4 4 0 1 0 4 4a4 4 0 0 0-4-4m0 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2"
+										></path></symbol
+									>
+									<use xlink:href="#ai:uil:map-marker"></use>
+								</svg>
+								<span
+									>Ruta N34, Lavalle, Mendoza (Argentina)</span
+								>
+							</div>
+
+							<div
+								class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+							>
+								<svg
+									width="1em"
+									height="1em"
+									viewBox="0 0 24 24"
+									class="text-gray-900 dark:text-gray-400 w-4 h-4 transition duration-500"
+									data-icon="uil:envelope"
+								>
+									<symbol id="ai:uil:envelope"
+										><path
+											fill="currentColor"
+											d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-.41 2l-5.88 5.88a1 1 0 0 1-1.42 0L5.41 6ZM20 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7.41l5.88 5.88a3 3 0 0 0 4.24 0L20 7.41Z"
+										></path></symbol
+									>
+									<use xlink:href="#ai:uil:envelope"></use>
+								</svg>
+								<a href="mailto:hello@astroship-pro.com">
+									titoagustinsuarez6@gmail.com
+								</a>
+							</div><div
+								class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+							>
+								<svg
+									width="1em"
+									height="1em"
+									viewBox="0 0 24 24"
+									class="text-gray-900 dark:text-gray-400 w-4 h-4 transition duration-500"
+									data-icon="uil:phone"
+								>
+									<symbol id="ai:uil:phone"
+										><path
+											fill="currentColor"
+											d="M19.44 13c-.22 0-.45-.07-.67-.12a9.44 9.44 0 0 1-1.31-.39a2 2 0 0 0-2.48 1l-.22.45a12.18 12.18 0 0 1-2.66-2a12.18 12.18 0 0 1-2-2.66l.42-.28a2 2 0 0 0 1-2.48a10.33 10.33 0 0 1-.39-1.31c-.05-.22-.09-.45-.12-.68a3 3 0 0 0-3-2.49h-3a3 3 0 0 0-3 3.41a19 19 0 0 0 16.52 16.46h.38a3 3 0 0 0 2-.76a3 3 0 0 0 1-2.25v-3a3 3 0 0 0-2.47-2.9m.5 6a1 1 0 0 1-.34.75a1.05 1.05 0 0 1-.82.25A17 17 0 0 1 4.07 5.22a1.09 1.09 0 0 1 .25-.82a1 1 0 0 1 .75-.34h3a1 1 0 0 1 1 .79q.06.41.15.81a11.12 11.12 0 0 0 .46 1.55l-1.4.65a1 1 0 0 0-.49 1.33a14.49 14.49 0 0 0 7 7a1 1 0 0 0 .76 0a1 1 0 0 0 .57-.52l.62-1.4a13.69 13.69 0 0 0 1.58.46q.4.09.81.15a1 1 0 0 1 .79 1Z"
+										></path></symbol
+									>
+									<use xlink:href="#ai:uil:phone"></use>
+								</svg>
+								<a href="tel:+1 (987) 4587 899"
+									>+54 (261) 2649 474</a
+								>
+							</div>
+						</div>
+						<h2
+							class="font-medium font-display text-2xl text-gray-800 dark:text-gray-400 pt-12 transition duration-500"
+						>
+							Redes.
+						</h2>
+						<div class="mt-5">
+							<a
+								href="https://www.instagram.com/agus_suarez1203/"
+							>
+								<div
+									class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+								>
+									<svg
+										class="icon icon-tabler icon-tabler-brand-instagram text-gray-900 dark:text-gray-400 w-5 h-5 transition duration-500"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										><path
+											stroke="none"
+											d="M0 0h24v24H0z"
+											fill="none"></path><path
+											d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+										></path><path
+											d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+										></path><path d="M16.5 7.5l0 .01"
+										></path></svg
+									>
+									<span>agus_suarez1203</span>
+								</div>
+							</a>
+
+							<a href="https://github.com/Agus-tito">
+								<div
+									class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+								>
+									<svg
+										class="icon icon-tabler icon-tabler-brand-github text-gray-900 dark:text-gray-400 w-5 h-5 transition duration-500"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										><path
+											stroke="none"
+											d="M0 0h24v24H0z"
+											fill="none"></path><path
+											d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+										></path></svg
+									>
+									<span>Agus-tito</span>
+								</div>
+							</a>
+
+							<a href="www.linkedin.com/in/agustito-suarez">
+								<div
+									class="flex items-center mt-2 space-x-2 text-gray-900 dark:text-gray-600 transition duration-500"
+								>
+									<svg
+										class="icon icon-tabler icon-tabler-brand-linkedin text-gray-900 dark:text-gray-400 w-5 h-5 transition duration-500"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										><path
+											stroke="none"
+											d="M0 0h24v24H0z"
+											fill="none"></path><path
+											d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+										></path><path d="M8 11l0 5"></path><path
+											d="M8 8l0 .01"></path><path
+											d="M12 16l0 -5"></path><path
+											d="M16 16v-3a2 2 0 0 0 -4 0"
+										></path></svg
+									>
+									<span>Agustin Suarez</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="dark:bg-zinc-900/40 border border-zinc-800 p-5 md:p-8 rounded-2xl mb-5"
+					>
+						<form
+							action="https://api.web3forms.com/submit"
+							method="POST"
+						>
+							<input
+								type="hidden"
+								name="access_key"
+								value="a09b281b-3258-4c77-96b8-74ae7988fae7"
+							/>
+							<input type="hidden" name="from_name" value="Mi Portafolio">
+							<input type="checkbox" name="botcheck" id="" style="display: none;">
+
+							<input type="hidden" name="redirect" value="http://localhost:4321/thanks">
+							<div class="mb-5" data-astro-cid-uwnxe3i2="">
+								<input
+									type="text"
+									placeholder="Nombre Completo"
+									class="w-full px-4 py-3 border text-gray-400 border-zinc-800 placeholder:text-slate-700 dark:placeholder:text-slate-400 rounded-md outline-none focus:ring-2 focus:ring-violet-400 bg-zinc-400 dark:bg-zinc-900 transition duration-500"
+									name="name"
+									required
+								/>
+							</div>
+							<div class="mb-5" data-astro-cid-uwnxe3i2="">
+								<input
+									id="email_address"
+									type="email"
+									placeholder="Correo Electrónico"
+									name="email"
+									required
+									class="w-full px-4 py-3 border text-gray-400 border-zinc-800 placeholder:text-slate-700 dark:placeholder:text-slate-400 rounded-md outline-none focus:ring-2 focus:ring-violet-400 bg-zinc-400 dark:bg-zinc-900 transition duration-500 after:bg-red-300"
+								/>
+							</div>
+							<div class="mb-3" data-astro-cid-uwnxe3i2="">
+								<textarea
+									name="message"
+									required
+									placeholder="Tu Mensaje"
+									class="w-full px-4 py-3 border text-gray-400 border-zinc-800 placeholder:text-slate-700 dark:placeholder:text-slate-400 rounded-md outline-none focus:ring-2 focus:ring-violet-400 bg-zinc-400 dark:bg-zinc-900 transition duration-500"
+								></textarea>
+							</div>
+							<button
+								type="submit"
+								class="rounded-2xl text-center w-full px-6 py-3 bg-violet-600 text-white hover:bg-violet-800 transition duration-500"
+								>Enviar Mensaje
+							</button>
+						</form>
+						<script src="https://web3forms.com/client/script.js" async defer></script>
+					</div>
+				</div>
+			</div>
+		</Section>
+	</div>
+	<Footer />
+</Layout>
