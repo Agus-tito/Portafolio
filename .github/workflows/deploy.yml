@@ -20,6 +20,14 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        
+      - name: Deploy using Node.js 20
+          runs:
+             using: 'node20'
+             pre: 'setup.js'
+             main: 'index.js'
+             post: 'cleanup.js'
+             
       - name: Install, build, and upload your site output
         uses: withastro/action@v1
         # with:
