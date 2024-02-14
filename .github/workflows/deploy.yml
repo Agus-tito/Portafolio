@@ -28,8 +28,8 @@ jobs:
       - run: npx astro compile
       - name: Deploy to GitHub Pages
         run: |
-          git config --global user.email "titoagustinsuarez6@gmail.com"
-          git config --global user.name "Agustin Suarez"
+          git config user.email "titoagustinsuarez6@gmail.com"
+          git config user.name "Agustin Suarez"
           git add .
           git commit -m "Build and deploy"
           git push
