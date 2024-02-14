@@ -17,7 +17,7 @@ jobs:
       - run: npx astro compile
       - name: Deploy to GitHub Pages
         run: |
-          echo 'sub.mydomain.com' > public/CNAME # Si usas un dominio personalizado
+          echo 'sub.agustin-suarez.com' > public/CNAME # Si usas un dominio personalizado
           git add .
           git commit -m "Build and deploy"
           git push
