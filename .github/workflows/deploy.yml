@@ -13,7 +13,7 @@ jobs:
         run: |
           npm install
           npx astro compile
-          echo 'sub.mydomain.com' > public/CNAME # Si usas un dominio personalizado
+          echo 'sub.agustin-suarez.com' > public/CNAME
           git add .
           git commit -m "Build and deploy"
           git push
