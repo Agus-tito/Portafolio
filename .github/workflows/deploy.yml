@@ -1,30 +1,23 @@
 name: Deploy to GitHub Pages
-
 on:
-  # Activa el flujo de trabajo cada vez que hagas push a la rama `main`
-  # Usando un nombre de rama diferente? Reemplaza `main` con el nombre de tu rama
   push:
-    branches: [ main ]
-  # Te permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones en GitHub.
-  workflow_dispatch:
-
-# Permite que este trabajo clone el repositorio y cree un despliegue de página
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-  
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
-      - name: Build and deploy
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx astro compile
+      - name: Deploy to GitHub Pages
         run: |
-          npm install
-          npx astro compile
-          echo 'sub.agustin-suarez.com' > public/CNAME
+          echo 'sub.mydomain.com' > public/CNAME # Si usas un dominio personalizado
           git add .
           git commit -m "Build and deploy"
           git push
