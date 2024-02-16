@@ -20,13 +20,26 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v1
       - name: Use Node.js 20.x
         uses: actions/setup-node@v2
         with:
           node-version: 20
-      - run: npm install
-      - run: npx astro compile
+        # con:
+          # path: . # La ubicación raíz de tu proyecto de Astro dentro del repositorio. (opcional)
+          # node-version: 18 # La versión específica de Node que debería usarse para construir tu sitio. Por defecto es 18. (opcional)
+          # package-manager: pnpm@latest # El gestor de paquetes de Node que debería usarse para instalar dependencias y construir tu sitio. Detectado automáticamente basado en tu lockfile. (opcional)
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
+<<<<<<< HEAD
         run: |
           git add .
           git commit -m "Build and deploy"
@@ -38,3 +51,7 @@ jobs:
 
 
 
+=======
+        id: deployment
+        uses: actions/deploy-pages@v1
+>>>>>>> a9a2b2a7781b0c05867f60b2148c39146314231d
