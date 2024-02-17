@@ -39,19 +39,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-<<<<<<< HEAD
-        run: |
-          git add .
-          git commit -m "Build and deploy"
-          git push
-
-
-
-
-
-
-
-=======
         id: deployment
         uses: actions/deploy-pages@v1
->>>>>>> a9a2b2a7781b0c05867f60b2148c39146314231d
