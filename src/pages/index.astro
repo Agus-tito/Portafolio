@@ -652,11 +652,17 @@ import Project from "../components/Project.astro";
 								style="display: none;"
 							/>
 
-							<input
-								type="hidden"
-								name="redirect"
-								value="https://Portafolio/thanks"
-							/>
+							<input type="hidden" name="redirect">
+ 							<script>
+								const form = document.getElementById('your-form-id');
+								form.addEventListener('submit', function(event) {
+      									if (window.location.hostname === 'localhost') {
+        							   	   this.redirect.value = 'http://localhost:4321/Portafolio/thanks';
+      									} else {
+       								  	   this.redirect.value = 'https://agus-tito.github.io/Portafolio/gracias';
+     								 	}
+    								});
+  							</script>
 							<div class="mb-5" data-astro-cid-uwnxe3i2="">
 								<input
 									type="text"
