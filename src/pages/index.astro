@@ -6,10 +6,10 @@ import Footer from "../components/Footer.astro";
 import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import Project from "../components/Project.astro";
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-const { projects } = await getEntry('content', 'projects');
-const lang = 'es'; // O podrías pasarlo como prop si tienes múltiples versiones de la página
+const projectsData = await getCollection('projects');
+const projects = projectsData[0].data.projects;
 ---
 
 <Layout title="Agustin Suarez">
@@ -307,6 +307,11 @@ const lang = 'es'; // O podrías pasarlo como prop si tienes múltiples versione
 		</Card>
 	</Section>
 
+
+
+	
+
+
 	<div id="Projects">
 		<Section title="Proyectos.">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-12">
@@ -327,6 +332,10 @@ const lang = 'es'; // O podrías pasarlo como prop si tienes múltiples versione
             </div>
         </Section>
 	</div>
+
+
+
+
 	<div id="Contact">
 		<Section title="¿Te gustaría saber más?">
 			<div class="max-w-screen-xl mx-auto px-5">

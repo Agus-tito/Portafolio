@@ -1,13 +1,10 @@
 ---
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-const { projects } = await getEntry('content', 'projects');
+const projectsData = await getCollection('projects');
+const projects = projectsData[0].data.projects;
 
-interface Props {
-    projectId: string;
-}
-
-const { projectId } = Astro.props;
+const { projectId, lang = 'es' } = Astro.props;
 const project = projects.find(p => p.id === projectId);
 
 if (!project) {
@@ -15,7 +12,7 @@ if (!project) {
 }
 
 const { image, url } = project;
-const { title, description, date } = project;
+const { title, description, date } = project.translations[lang];
 ---
 
 <article
